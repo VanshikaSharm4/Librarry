@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h2>Library<span id="heading">.</span></h2>
+        <ul class="list-items">
+          <a href="https://github.com/VanshikaSharm4" target="_blank"><li>About</li></a>
+          <a href="#scroll"><li>Authors</li></a>
+          <a href="#scroll"><li>Books</li></a>
+          <a href="#scroll"><li>Genres</li></a>
+          <a href="#footer"><li>Contact</li></a>
+        </ul>
+      </nav>
+      <div class="img-container">
+        <img
+          src="https://i.pinimg.com/564x/c1/74/a1/c174a113cab10ab434194afe7d7442b1.jpg"
+          alt=""
+          class="back"
+        />
+        <img
+          src="https://i.pinimg.com/564x/98/48/82/98488298e88ded4544634e9cc108b0b9.jpg"
+          alt=""
+          class="front"
+        />
+      </div>
+
+      <div class="content">
+        <h1 class="toph">Welcome to <span>Library.</span></h1>
+        <p>Empowering Minds, One Book at a Time!</p>
+        <p class="p2">Get your membership now.</p>
+       <a href="#scroll"> <button>Start Reading</button> </a>
+      </div>
+    </header>
+
+    <section class="middle">
+      <p style="font-family: Poppins;" class="one">About library</p>
+      <p class="two">
+        Reading enhances knowledge, broadens perspectives, and fosters critical thinking. It's a fundamental tool for personal and professional development.
+      </p>
+      <div style="display: flex">
+        <div class="img1">
+          <img
+            src="https://i.pinimg.com/564x/57/e0/cb/57e0cb68bb653b005c46d87ab3b53f4d.jpg"
+            alt="" 
+          />
+        </div>
+        <div>
+        <div class="carrousal">
+          <div class="image fade">
+            <img
+              src="assets/img5.jpg"
+              alt="" height="85%"
+            />
+          </div>
+          <div class="image fade">
+            <img
+              src="assets/img2.jpg"
+              alt="" height="85%"
+            />
+          </div>
+          <div class="image fade">
+            <img
+              src="https://i.pinimg.com/564x/2b/6e/44/2b6e4478ce977785551a214e14e188a0.jpg"
+              alt="" height="85%"
+            />
+          </div>
+          <div class="image fade">
+            <img
+              src="https://i.pinimg.com/564x/89/3a/d2/893ad2a1734f1785ea121ecb9a751a6e.jpg"
+              alt="" height="85%"
+            />
+          </div>
+          <div class="image fade">
+            <img
+              src="https://i.pinimg.com/564x/bf/5d/91/bf5d91b0902ec77a71dd7f3ea1a635a6.jpg"
+              alt="" height="85%"
+            />
+          </div>
+
+        <i id="prev" onclick="show_image(-1)" class="fa-solid fa-chevron-left"></i>
+        <i id="next" onclick="show_image(1)" class="fa-solid fa-chevron-right"></i>
+
+        </div>
+
+
+        <div class="sub" >
+          <p class="a">Exploring novel genres unlocks diverse storytelling worlds, offering fresh perspectives and unique experiences.</p> <br>
+          <p class="b">Lets start your amazing journew with knowledge and fun, grab a book now!</p> <br>
+          <a href="https://www.astor.edu.sg/post/benefits-to-visiting-the-library" target="_blank"><button class="readMore">READ MORE</button></a>
+
+        </div>
+      </div>
+      </div>
+
+      
+
+    </section>
+
+    <section class="second">
+      <div class="gallary">
+        <img src="assets/img1.jpg" alt="">
+        <img src="assets/img2.jpg" alt="">
+        <img src="assets/img3.jpg" alt="">
+        <img src="assets/img4.jpg" alt="">
+        <img src="assets/img5.jpg" alt="">
+        <img src="assets/img6.jpg" alt="">
+        <img src="assets/img7.jpg" alt="">
+        <img src="assets/img8.jpg" alt="">
+        <img src="assets/img9.jpg" alt="">
+      </div>
+    </section>
+    
+
+    <a href="" id="scroll"></a><section class="cats">
+      <div class="sort-options">
+        <div>
+        <label for="sort-author">Author:</label>
+        <select id="sort-author" onchange="filterBooks()">
+          <option value="all">All</option>
+          <option value="Harper Lee">Harper Lee</option>
+          <option value="Mariana Enriquez">Mariana Enriquez</option>
+          <option value="George Orwell">George Orwell</option>
+          <option value="Jane Austen">Jane Austen</option>
+          <option value="F. Scott Fitzgerald">F. Scott Fitzgerald</option>
+          <option value="Herman Melville">Herman Melville</option>
+          <option value="Leo Tolstoy">Leo Tolstoy</option>
+          <option value="Fyodor Dostoevsky">Fyodor Dostoevsky</option>
+          <option value="J.D. Salinger">J.D. Salinger</option>
+          <option value="J.R.R. Tolkien">J.R.R. Tolkien</option>
+          <option value="Lauren Elkin">Lauren Elkin</option>
+        </select>
+      </div>
+      <div>
+        <label for="sort-genre">Genre:</label>
+        <select id="sort-genre" onchange="filterBooks()">
+          <option value="all">All</option>
+          <option value="Horror">Horror</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Drama">Drama</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Romance">Romance</option>
+          <option value="Tragedy">Tragedy</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Psychological Fiction">Psychological Fiction</option>
+          <option value="Coming-of-Age">Coming-of-Age</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Literary">Literary</option>
+        </select>
+      </div>
+      <div>
+        <label for="sort-date">Publication Date:</label>
+        <select id="sort-date" onchange="filterBooks()">
+          <option value="all" >All</option>
+          <option value="2023">2023</option>
+          <option value="1960">1960</option>
+          <option value="1949">1949</option>
+          <option value="1813">1813</option>
+          <option value="1925">1925</option>
+          <option value="1851">1851</option>
+          <option value="1869">1869</option>
+          <option value="1866">1866</option>
+          <option value="1951">1951</option>
+          <option value="1937">1937</option>
+          <option value="1954">1954</option>
+        </select>
+      </div>
+      </div>
+  
+      <div class="catImg">
+        <div class="book" data-author="Mariana Enriquez" data-genre="Horror" data-date="2023">
+          <img src="https://images-us.bookshop.org/ingram/9780593733257.jpg?height=500&v=v2-6e38a73ed216a7e3a4d4780da9135a33" alt="">
+          <h3>A Sunny Place for Shady People</h3>
+          <p>Author : Mariana Enriquez</p>
+          <p>Genre: Horror</p>
+          <p>Publication Date: 2023</p>
+        </div>
+  
+        <div class="book" data-author="Harper Lee" data-genre="Fiction Drama" data-date="1960">
+          <img src="https://imgs.search.brave.com/dL1Wm_r7K_qfS8JyPeb99LbjewiNxh6n5IffHi05az8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvdG8ta2lsbC1h/LW1vY2tpbmdiaXJk/LXBpY3R1cmVzLXEx/cXEyZGFhZGg2d2x2/d2YuanBn" alt="To Kill a Mockingbird">
+          <h3>To Kill a Mockingbird</h3>
+          <p>Author: Harper Lee</p>
+          <p>Genre: Fiction, Drama</p>
+          <p>Publication Date: 1960</p>
+        </div>
+  
+        <div class="book" data-author="George Orwell" data-genre="Dystopian Science Fiction" data-date="1949">
+          <img src="https://imgs.search.brave.com/zDGALSGUyTKIwHFD0cmgq_5MRrCY6v80QNRXpUQ0z6I/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzUxWDliaUxuaC1M/LmpwZw" alt="1984">
+          <h3>1984</h3>
+          <p>Author: George Orwell</p>
+          <p>Genre: Dystopian, Science Fiction</p>
+          <p>Publication Date: 1949</p>
+        </div>
+  
+        <div class="book" data-author="Jane Austen" data-genre="Romance Fiction" data-date="1813">
+          <img src="https://imgs.search.brave.com/bE4rz_zOwnj2auPX1D30wEbAi2pNtDh4p6QNZHtM1Cw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMzLnBlbmd1aW5y/YW5kb21ob3VzZS5j/b20vY292ZXIvOTc4/MDQ1MTUzMDc4Mw.jpeg" alt="Pride and Prejudice">
+          <h3>Pride and Prejudice</h3>
+          <p>Author: Jane Austen</p>
+          <p>Genre: Romance, Fiction</p>
+          <p>Publication Date: 1813</p>
+        </div>
+  
+        <div class="book" data-author="F. Scott Fitzgerald" data-genre="Fiction Tragedy" data-date="1925">
+          <img src="https://imgs.search.brave.com/q9Km-7QcRFppX16rr1YR6gPazmumOjghxXpxojai3wM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzgxUXVFR3c4VlBM/LmpwZw" alt="The Great Gatsby">
+          <h3>The Great Gatsby</h3>
+          <p>Author: F. Scott Fitzgerald</p>
+          <p>Genre: Fiction, Tragedy</p>
+          <p>Publication Date: 1925</p>
+        </div>
+  
+        <div class="book" data-author="Herman Melville" data-genre="Adventure Fiction" data-date="1851">
+          <img src="https://imgs.search.brave.com/Rw0Jama6pHmQynNNTjGq3B3F6_z9qacMv09wCkSajIE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxWGRqbXgzOXVM/LmpwZw" alt="Moby-Dick">
+          <h3>Moby-Dick</h3>
+          <p>Author: Herman Melville</p>
+          <p>Genre: Adventure, Fiction</p>
+          <p>Publication Date: 1851</p>
+        </div>
+    
+        <div class="book" data-author="Leo Tolstoy" data-genre="Historical Fiction" data-date="1869">
+          <img src="https://imgs.search.brave.com/gP9vXtSkyIj5y_koihEDWUrAPBwSacmX4l62HlHNIGs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxNG5QaXZLMW9M/LmpwZw" alt="War and Peace">
+          <h3>War and Peace</h3>
+          <p>Author: Leo Tolstoy</p>
+          <p>Genre: Historical Fiction</p>
+          <p>Publication Date: 1869</p>
+        </div>
+    
+        <div class="book" data-author="Fyodor Dostoevsky" data-genre="Psychological Fiction" data-date="1866">
+          <img src="https://imgs.search.brave.com/tXjiqXYicf6Ircsx9jJWHgPWGzhLZ8d4p7YX4WKHYgA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2xvYmFsZ3JleWVi/b29rcy5jb20vY29u/dGVudC9ib29rLWNv/dmVycy9meW9kb3It/ZG9zdG9ldnNreV9j/cmltZS1hbmQtcHVu/aXNobWVudC5qcGc" alt="Crime and Punishment">
+          <h3>Crime and Punishment</h3>
+          <p>Author: Fyodor Dostoevsky</p>
+          <p>Genre: Psychological Fiction</p>
+          <p>Publication Date: 1866</p>
+        </div>
+    
+        <div class="book" data-author="J.D. Salinger" data-genre="Fiction Coming-of-Age" data-date="1951">
+          <img src="https://imgs.search.brave.com/rw74PFFH-85EIqCJFg2TZVrqeWn9eQr6SorgusVStqY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aGFjaGV0dGVib29r/Z3JvdXAuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE3LzA2/Lzk3ODAzMTY3Njk1/MzIuanBnP3c9NDQ2" alt="The Catcher in the Rye">
+          <h3>The Catcher in the Rye</h3>
+          <p>Author: J.D. Salinger</p>
+          <p>Genre: Fiction, Coming-of-Age</p>
+          <p>Publication Date: 1951</p>
+        </div>
+    
+        <div class="book" data-author="J.R.R. Tolkien" data-genre="Fantasy Adventure" data-date="1937">
+          <img src="https://imgs.search.brave.com/fZw78oIxGNNaJ-bhQS5cGvyA4ywkRoFlcgJEOUHCRJs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/aXMtdGhlcmUtYS1k/ZWZpbml0aXZlLWJv/b2stdmVyc2lvbi1v/Zi10aGUtaG9iYml0/LXYwLXZsdTR3NTh3/dGk5YzEuanBlZz93/aWR0aD02NDAmY3Jv/cD1zbWFydCZhdXRv/PXdlYnAmcz1kZmJl/YjYyOGNmZjAxNjdh/MTY2ZDk4MDRlMTcy/YTljZTlkOTlmNjlj" alt="The Hobbit">
+          <h3>The Hobbit</h3>
+          <p>Author: J.R.R. Tolkien</p>
+          <p>Genre: Fantasy, Adventure</p>
+          <p>Publication Date: 1937</p>
+        </div>
+    
+        <div class="book" data-author="J.R.R. Tolkien" data-genre="Fantasy Epic" data-date="1954">
+          <img src="https://imgs.search.brave.com/FizaNEw4nf0mLJX9pKt5wY9Jx2sazjfNr2fw4FPrwKI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnRo/cmlmdGJvb2tzLmNv/bS9hcGkvaW1hZ2Vo/YW5kbGVyL20vNkJB/QTNGQUM0MzIxRkM0/RDhGMDdDQjBEMUYw/RDVBMTBEMzlFNzRF/Qy5qcGVn" alt="The Lord of the Rings">
+          <h3>The Lord of the Rings</h3>
+          <p>Author: J.R.R. Tolkien</p>
+          <p>Genre: Fantasy, Epic</p>
+          <p>Publication Date: 1954</p>
+        </div>
+    
+        <div class="book" data-author="Lauren Elkin" data-genre="Literary Family Life" data-date="2023">
+          <img src="https://images-us.bookshop.org/ingram/9780374615291.jpg?height=500&v=v2-e3cfe813b329bbb1ed70b926256d8602" alt="Scaffolding">
+          <h3>Scaffolding</h3>
+          <p>Author: Lauren Elkin</p>
+          <p>Genre: Literary, Family Life</p>
+          <p>Publication Date: 2023</p>
+        </div>
+      </div>
+    </section>
+
+    <a href="" id="footer"></a>
+    <footer >
+      <p>Vanshika Sharma | <a>Library</a></p>
+      <div>
+        <a href="https://github.com/vanshikasharm4" target="_blank">
+          <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" alt="GitHub" style="margin-right: 10px;">
+      </a>
+      <a href="https://www.linkedin.com/in/vanshika-sharma-191622270/" target="_blank">
+          <img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin.png" alt="LinkedIn">
+      </a>
+      </div>
+      <p id="copyright">&copy; 2024 Vanshika Sharma. All rights reserved.</p>
+  </footer>
+  
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/2a6fa3c099.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+
